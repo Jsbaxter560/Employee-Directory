@@ -35,6 +35,7 @@ class Form extends React.Component{
             <table className="table table-striped">
                 <thead>
                 <tr>
+                    <th>Pic</th>
                     <th>Name</th>
                     <th>Phone</th>
                     <th>City</th>
@@ -45,13 +46,12 @@ class Form extends React.Component{
                 <tbody>
                     {this.state.employeeData.map( (ele,key) =>{
                         return(<tr key={key}>
+                            <td><img src={ele.pic}/></td>
                             <td>{ele.name}</td>
                             <td>{ele.phone}</td>
                             <td>{ele.city}</td>
                             <td>{ele.country}</td>
                             <td>{ele.username}</td>
-                            <td><img src={ele.pic}/></td>
-
                         </tr>)
                     })}
                 </tbody>
